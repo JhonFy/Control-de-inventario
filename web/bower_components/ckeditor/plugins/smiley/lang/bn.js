@@ -1,0 +1,1 @@
+﻿CKEDITOR.plugins.setLang("smiley","bn",{options:"Smiley Options",title:"স�?মাইলী য�?ক�?ত কর",toolbar:"স�?মাইলী"});

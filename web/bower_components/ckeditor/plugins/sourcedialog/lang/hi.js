@@ -1,0 +1,1 @@
+﻿CKEDITOR.plugins.setLang("sourcedialog","hi",{toolbar:"सोर�?स",title:"सोर�?स"});

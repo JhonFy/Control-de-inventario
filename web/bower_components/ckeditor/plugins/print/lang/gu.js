@@ -1,0 +1,1 @@
+﻿CKEDITOR.plugins.setLang("print","gu",{toolbar:"પ�?રિન�?ટ"});

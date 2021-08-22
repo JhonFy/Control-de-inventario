@@ -1,0 +1,1 @@
+ï»¿CKEDITOR.plugins.setLang("autoembed","ja",{embeddingInProgress:"è²¼ã‚Šä»˜ã?‘ã‚‰ã‚Œã?ŸURLã‚’åŸ‹ã‚?è¾¼ã?¿ä¸­...",embeddingFailed:"ã?“ã?®URLã?¯è‡ªå‹•çš„ã?«åŸ‹ã‚?è¾¼ã‚€ã?“ã?¨ã?Œå‡ºæ?¥ã?¾ã?›ã‚“ã€‚"});

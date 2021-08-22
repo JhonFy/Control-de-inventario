@@ -1,0 +1,1 @@
+ï»¿CKEDITOR.plugins.setLang("pagebreak","zh",{alt:"æ?›é ?",toolbar:"æ?’å…¥æ?›é ?ç¬¦è™Ÿä»¥ä¾¿åˆ—å?°"});

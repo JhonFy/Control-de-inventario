@@ -1,0 +1,1 @@
+﻿CKEDITOR.plugins.setLang("preview","gu",{preview:"પૂર�?વદર�?શન"});

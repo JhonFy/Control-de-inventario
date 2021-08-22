@@ -1,0 +1,1 @@
+ï»¿CKEDITOR.plugins.setLang("font","sr-latn",{fontSize:{label:"VeliÄ?ina ",voiceLabel:"VeliÄ?ina slova",panelTitle:"VeliÄ?ina slova"},label:"Font",panelTitle:"Naziv fonta",voiceLabel:"Font"});

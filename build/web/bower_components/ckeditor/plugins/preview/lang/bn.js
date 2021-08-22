@@ -1,0 +1,1 @@
+﻿CKEDITOR.plugins.setLang("preview","bn",{preview:"প�?রাকদর�?শন"});

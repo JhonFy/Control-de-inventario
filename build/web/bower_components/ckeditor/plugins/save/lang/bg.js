@@ -1,0 +1,1 @@
+﻿CKEDITOR.plugins.setLang("save","bg",{toolbar:"Запи�?"});
