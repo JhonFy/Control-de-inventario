@@ -74,6 +74,4 @@ public class productos {
     public void setProveedores(proveedores proveedores) {
         this.proveedores = proveedores;
     }
-
-    
 }

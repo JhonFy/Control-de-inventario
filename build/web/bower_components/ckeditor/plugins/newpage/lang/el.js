@@ -1,1 +1,3 @@
-﻿CKEDITOR.plugins.setLang("newpage","el",{toolbar:"�?έα Σελίδα"});
+/* global CKEDITOR */
+
+﻿CKEDITOR.plugins.setLang("newpage","el",{toolbar:"�?έα Σελίδα"});

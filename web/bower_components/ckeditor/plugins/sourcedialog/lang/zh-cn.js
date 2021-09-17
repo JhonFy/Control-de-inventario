@@ -1,1 +1,3 @@
-ï»¿CKEDITOR.plugins.setLang("sourcedialog","zh-cn",{toolbar:"æº?ç ?",title:"æº?ç ?"});
+/* global CKEDITOR */
+
+ï»¿CKEDITOR.plugins.setLang("sourcedialog","zh-cn",{toolbar:"ï¿½?ï¿½?",title:"ï¿½?ï¿½?"});

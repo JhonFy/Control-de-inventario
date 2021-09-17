@@ -36,6 +36,32 @@ public class DAOUSUARIO extends conexion {
         return usu;
     }
 
+    public usuario leerUsuario(usuario usu) throws Exception {
+        usuario usus = null;
+        ResultSet rs = null;
+        String sql = "SELECT U.IDUSUARIO, U.NOMBREUSUARIO, U.CLAVE, U.ESTADO, U.IDCARGO "
+                + "FROM usuario U WHERE U.IDUSUARIO = " + usu.getId_usuario();
+        try {
+            this.conectar(false);
+            rs = this.ejecutarOrdenDatos(sql);
+            if (rs.next() == true) {
+                usus = new usuario();
+                usus.setId_usuario(rs.getInt("IDUSUARIO"));
+                usus.setNombreUsuario(rs.getString("NOMBREUSUARIO"));
+                usus.setClave(rs.getString("CLAVE"));
+                usus.setEstado(rs.getBoolean("ESTADO"));
+                usus.setCargo(new cargo());
+                usus.getCargo().setCodigo(rs.getInt("IDCARGO"));
+            }
+            this.cerrar(true);
+        } catch (Exception e) {
+            this.cerrar(false);
+            throw e;
+        } finally {
+        }
+        return usus;
+    }
+
     public List<usuario> listarUsuarios() throws Exception {
         List<usuario> usuarios;
         usuario usu;
@@ -44,7 +70,6 @@ public class DAOUSUARIO extends conexion {
                 + "FROM usuario U INNER JOIN cargo C "
                 + "ON C.IDCARGO = U.IDCARGO "
                 + "ORDER BY U.IDUSUARIO";
-
         try {
             this.conectar(false);
             rs = this.ejecutarOrdenDatos(sql);
@@ -68,8 +93,6 @@ public class DAOUSUARIO extends conexion {
     }
 
     public void registrarUsuarios(usuario usu) throws Exception {
-        
-        
         String sql;
         sql = "INSERT INTO Usuario (NOMBREUSUARIO, CLAVE, ESTADO, IDCARGO) "
                 + "VALUES ('" + usu.getNombreUsuario() + "', '"
@@ -86,59 +109,32 @@ public class DAOUSUARIO extends conexion {
         }
     }
 
-    public usuario leerUsuario(usuario usu) throws Exception {
-        usuario usus = null;
-        ResultSet rs = null;
-        String sql = "SELECT U.IDUSUARIO, U.NOMBREUSUARIO, U.CLAVE, U.ESTADO, U.IDCARGO "
-                + "FROM usuario U WHERE U.IDUSUARIO = " + usu.getId_usuario();
-
+    public void actualizarUsuarios(usuario usu) throws Exception {
+        String sql = "UPDATE usuario SET NOMBREUSUARIO = '"
+                + usu.getNombreUsuario() + "', CLAVE = '"
+                + usu.getClave() + "', ESTADO = "
+                + (usu.isEstado() == true ? "1" : "0")
+                + ", IDCARGO = "
+                + usu.getCargo().getCodigo()
+                + " WHERE IDUSUARIO = " + usu.getId_usuario();
         try {
             this.conectar(false);
-            rs = this.ejecutarOrdenDatos(sql);
-            if (rs.next() == true) {
-                usus = new usuario();
-                usus.setId_usuario(rs.getInt("IDUSUARIO"));
-                usus.setNombreUsuario(rs.getString("NOMBREUSUARIO"));
-                usus.setClave(rs.getString("CLAVE"));
-                usus.setEstado(rs.getBoolean("ESTADO"));
-                usus.setCargo(new cargo());
-                usus.getCargo().setCodigo(rs.getInt("IDCARGO"));
-            }
+            this.ejecutarOrden(sql);
             this.cerrar(true);
         } catch (Exception e) {
             this.cerrar(false);
             throw e;
-        } finally {
         }
-        return usus;
     }
-    
-    public void actualizarUsuarios(usuario usu) throws Exception{
-        String sql = "UPDATE usuario SET NOMBREUSUARIO = '"
-                + usu.getNombreUsuario() + "', CLAVE = '"
-                + usu.getClave() + "', ESTADO = "
-                + (usu.isEstado() == true ? "1": "0")
-                + ", IDCARGO = "
-                + usu.getCargo().getCodigo()
+
+    public void eliminarUsuario(usuario usu) throws Exception {
+        String sql = "DELETE FROM USUARIO"
                 + " WHERE IDUSUARIO = " + usu.getId_usuario();
-        try{
+        try {
             this.conectar(false);
             this.ejecutarOrden(sql);
             this.cerrar(true);
-        }catch(Exception e){
-            this.cerrar(false);
-            throw e;
-        }
-    }
-    
-    public void eliminarUsuario(usuario usu) throws Exception{
-        String sql = "DELETE FROM USUARIO"
-                + " WHERE IDUSUARIO = " + usu.getId_usuario();
-        try{
-           this.conectar(false);
-           this.ejecutarOrden(sql);
-           this.cerrar(true);
-        }catch(Exception e){
+        } catch (Exception e) {
             this.cerrar(false);
             throw e;
         }

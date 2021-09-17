@@ -1,1 +1,3 @@
-﻿CKEDITOR.plugins.setLang("newpage","bn",{toolbar:"নত�?ন পৃষ�?ঠা"});
+/* global CKEDITOR */
+
+﻿CKEDITOR.plugins.setLang("newpage","bn",{toolbar:"নত�?ন পৃষ�?ঠা"});

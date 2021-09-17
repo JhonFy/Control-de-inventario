@@ -1,1 +1,3 @@
-﻿CKEDITOR.plugins.setLang("showblocks","he",{toolbar:"הצגת בלוקי�?"});
+/* global CKEDITOR */
+
+﻿CKEDITOR.plugins.setLang("showblocks","he",{toolbar:"הצגת בלוקי�?"});

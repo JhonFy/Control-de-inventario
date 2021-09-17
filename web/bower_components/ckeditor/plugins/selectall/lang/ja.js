@@ -1,1 +1,3 @@
-ï»¿CKEDITOR.plugins.setLang("selectall","ja",{toolbar:"ã?™ã?¹ã?¦é?¸æŠž"});
+/* global CKEDITOR */
+
+ï»¿CKEDITOR.plugins.setLang("selectall","ja",{toolbar:"ï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½æŠž"});

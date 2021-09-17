@@ -1,1 +1,3 @@
-﻿CKEDITOR.plugins.setLang("smiley","hi",{options:"Smiley Options",title:"स�?माइली इन�?सर�?ट करें",toolbar:"स�?माइली"});
+/* global CKEDITOR */
+
+﻿CKEDITOR.plugins.setLang("smiley","hi",{options:"Smiley Options",title:"स�?माइली इन�?सर�?ट करें",toolbar:"स�?माइली"});

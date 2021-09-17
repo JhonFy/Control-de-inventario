@@ -1,1 +1,3 @@
-﻿CKEDITOR.plugins.setLang("selectall","bn",{toolbar:"সব সিলেক�?ট করি"});
+/* global CKEDITOR */
+
+﻿CKEDITOR.plugins.setLang("selectall","bn",{toolbar:"সব সিলেক�?ট করি"});

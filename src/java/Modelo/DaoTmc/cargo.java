@@ -1,5 +1,7 @@
 package Modelo.DaoTmc;
+
 public class cargo {
+
     private int codigo;
     private String nombreCargo;
     private boolean estado;
@@ -27,6 +29,4 @@ public class cargo {
     public void setEstado(boolean estado) {
         this.estado = estado;
     }
-    
-    
 }

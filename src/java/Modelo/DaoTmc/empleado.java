@@ -85,5 +85,4 @@ public class empleado {
     public void setUsuario(usuario usuario) {
         this.usuario = usuario;
     }
-
 }

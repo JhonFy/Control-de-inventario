@@ -1,1 +1,3 @@
-﻿CKEDITOR.plugins.setLang("save","bg",{toolbar:"Запи�?"});
+/* global CKEDITOR */
+
+﻿CKEDITOR.plugins.setLang("save","bg",{toolbar:"Запи�?"});

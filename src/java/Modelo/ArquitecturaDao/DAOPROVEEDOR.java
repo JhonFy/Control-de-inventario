@@ -8,11 +8,36 @@ import java.util.List;
 
 public class DAOPROVEEDOR extends conexion {
 
+    public proveedores leerProveedor(proveedores lprv) throws Exception {
+        proveedores leerpv = null;
+        ResultSet rsLeerp;
+        String sqlLp = "SELECT A.IDPROVEEDOR, A.NOMBRE, A.DIRECCION, A.TELEFONO, A.NIT, A.ESTADO "
+                + "FROM proveedores A WHERE A.IDPROVEEDOR = " + lprv.getIdProveedor();
+        try {
+            this.conectar(false);
+            rsLeerp = this.ejecutarOrdenDatos(sqlLp);
+            if (rsLeerp.next() == true) {
+                leerpv = new proveedores();
+                leerpv.setIdProveedor(rsLeerp.getInt("IDPROVEEDOR"));
+                leerpv.setNombre(rsLeerp.getString("NOMBRE"));
+                leerpv.setDireccion(rsLeerp.getString("DIRECCION"));
+                leerpv.setTelefono(rsLeerp.getString("TELEFONO"));
+                leerpv.setNit(rsLeerp.getString("NIT"));
+                leerpv.setEstado(rsLeerp.getString("ESTADO"));
+            }
+            rsLeerp.close();
+        } catch (Exception e) {
+            System.err.println("No puedo leer el proveedor: " + e.getMessage());
+        } finally {
+            this.cerrar(false);
+        }
+        return leerpv;
+    }
+    
     public List<proveedores> listarProveedor() throws Exception {
         List<proveedores> proveedor;
         proveedores tmcpv;
         ResultSet rspvd = null;
-
         String sqlproveedor = "SELECT B.IDPROVEEDOR, B.NOMBRE, B.DIRECCION, B.TELEFONO, B.NIT, B.ESTADO FROM PROVEEDORES B "
                 + "ORDER BY IDPROVEEDOR";
         try {
@@ -36,37 +61,27 @@ public class DAOPROVEEDOR extends conexion {
         }
         return proveedor;
     }
+    
+    public void registroProveedor(proveedores rProveedor) throws Exception {
+        String rProv;
 
-    public proveedores leerProveedor(proveedores lprv) throws Exception {
-        proveedores leerpv = null;
-        ResultSet rsLeerp;
-
-        String sqlLp = "SELECT A.IDPROVEEDOR, A.NOMBRE, A.DIRECCION, A.TELEFONO, A.NIT, A.ESTADO "
-                + "FROM proveedores A WHERE A.IDPROVEEDOR = " + lprv.getIdProveedor();
-
+        rProv = " INSERT INTO proveedores (nombre, direccion, telefono, nit, estado) "
+                + "VALUES ('" + rProveedor.getNombre() + "', '"
+                + rProveedor.getDireccion() + "', '"
+                + rProveedor.getTelefono() + "', '"
+                + rProveedor.getNit() + "', "
+                + rProveedor.getEstado() + " )";
         try {
             this.conectar(false);
-            rsLeerp = this.ejecutarOrdenDatos(sqlLp);
-            if (rsLeerp.next() == true) {
-                leerpv = new proveedores();
-                leerpv.setIdProveedor(rsLeerp.getInt("IDPROVEEDOR"));
-                leerpv.setNombre(rsLeerp.getString("NOMBRE"));
-                leerpv.setDireccion(rsLeerp.getString("DIRECCION"));
-                leerpv.setTelefono(rsLeerp.getString("TELEFONO"));
-                leerpv.setNit(rsLeerp.getString("NIT"));
-                leerpv.setEstado(rsLeerp.getString("ESTADO"));
-            }
-            rsLeerp.close();
+            this.ejecutarOrden(rProv);
+            this.cerrar(true);
         } catch (Exception e) {
-            System.err.println("No puedo leer el proveedor: " + e.getMessage());
-        } finally {
             this.cerrar(false);
+            throw e;
         }
-        return leerpv;
     }
 
     public void actualizarProveedor(proveedores aPvr) throws Exception {
-        
         String sqlPvr = "UPDATE proveedores SET NOMBRE = '"
                 + aPvr.getNombre() + "', DIRECCION = '"
                 + aPvr.getDireccion() + "', TELEFONO = '"
@@ -96,5 +111,4 @@ public class DAOPROVEEDOR extends conexion {
             throw e;
         }
     }
-
 }

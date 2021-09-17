@@ -1,1 +1,3 @@
-﻿CKEDITOR.plugins.setLang("save","th",{toolbar:"บันทึ�?"});
+/* global CKEDITOR */
+
+﻿CKEDITOR.plugins.setLang("save","th",{toolbar:"บันทึ�?"});

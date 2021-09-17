@@ -16,19 +16,15 @@
         <link href="bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="swetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="dist/css/skins/skin-blue.min.css">
-        <link rel="stylesheet"
-              href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     </head>
-    
     <body class="hold-transition skin-blue sidebar-mini">
         <div class="wrapper">
-
             <header class="main-header">
                 <a href="#" class="logo">
                     <span class="logo-mini"><b>T</b>MC</span>
                     <span class="logo-lg"><b>Administrador </b>TMC</span>
                 </a>
-
                 <nav class="navbar navbar-static-top" role="navigation">
                     <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
                         <span class="sr-only"></span>
@@ -57,7 +53,6 @@
                     </div>
                 </nav>
             </header>
-
             <aside class="main-sidebar">
                 <section class="sidebar">
                     <div class="user-panel">
@@ -69,63 +64,49 @@
                             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                         </div>
                     </div>
-
                     <ul class="sidebar-menu" data-widget="tree">
                         <li><a href="#"><i ></i> <span></span></a></li>
                         <li class="treeview active">
-                            <a href="#"><i class="glyphicon glyphicon-th-large"></i> <span>Registros</span>
+                            <a href="#"><i class="glyphicon glyphicon-th-large"></i> <span>Listar</span>
                                 <span class="pull-right-container">
                                     <i class="fa fa-angle-left pull-right"></i>
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="srvUsuario?accion=listarEmpleado"><i class="fa fa-address-book"></i>Empleados</a></li>
-                                <li><a href="srvUsuario?accion=listarProductos"><i class="fa fa-database"></i>Productos</a></li>
-                                <li class="active"><a href="srvUsuario?accion=listarMarca"><i class="fa fa-deaf"></i>Marcas</a></li>
-                                <li><a href="srvUsuario?accion=listarProveedor"><i class="fa fa-motorcycle"></i>Proveedores</a></li>
-                                <li><a href="srvUsuario?accion=listarUsuarios"><i class="fa fa-user"></i>Usuarios</a></li>
+                                <li><a href="srvUsuario?accion=listarEmpleado"><i class="fa fa-address-book"></i> Empleados</a></li>                               
+                                <li class="active"><a href="srvUsuario?accion=listarMarca"><i class="fa fa-deaf"></i> Marcas</a></li>
+                                <li><a href="srvUsuario?accion=listarProductos"><i class="fa fa-cogs"></i> Productos</a></li>
+                                <li><a href="srvUsuario?accion=listarProveedor"><i class="fa fa-motorcycle"></i> Proveedores</a></li>
+                                <li><a href="srvUsuario?accion=listarUsuarios"><i class="fa fa-user"></i> Usuarios</a></li>
                             </ul>
                         </li>
                     </ul>
                 </section>
             </aside>
-
             <div class="content-wrapper">
                 <section class="content-header">
                     <a href="srvUsuario?accion=nuevoMarca" class="btn btn-success">
-                        <i class="fa fa-plus"></i>Nueva Marca </a>
-
-                    <ol class="breadcrumb">
-                        <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
-                        <li class="active">Marcas</li>
-                    </ol>
+                        <i class="fa fa-plus"></i> Nueva Marca </a>
                 </section>
-
                 <section class="content">
                     <div class="box">
                         <div class="box-body">
-                            <div class="table-responsive" >                                 
+                            <div class="table-responsive">                                 
                                 <table class="table table-bordered table-striped dataTable table-hover" id="tablaMarca" class="display">
                                     <thead>
                                         <tr>
-                                            <th>Id Marca</th>
-                                            <th>Nombre</th>
-                                            <th>Estado</th>
-                                            <th>Acciones</th>
+                                            <th style="text-align: center">Marcas</th>
+                                            <th style="text-align: center">Acciones</th>
                                         </tr> 
                                     </thead>
                                     <c:forEach  var="tmcMarca" items="${marcas}" varStatus="itMarca">                                                    
                                         <tr>
-                                            <td align="center">${itMarca.index + 1}</td>
-                                            <td align="center">${tmcMarca.nombreMarca}</td>
-                                            <td align="center">${tmcMarca.estado}</td>
-
-                                            <td align="center"><a href="<c:url value="srvUsuario">
+                                            <td align="left">${tmcMarca.nombreMarca}</td>
+                                            <td align="right"><a href="<c:url value="srvUsuario">
                                                                       <c:param name="accion" value="leerMarca" />
                                                                       <c:param name="cActualizarm" value="${tmcMarca.idMarca}" />
                                                                   </c:url>"><button type="button" class="btn btn-warning" data-toggle="tooltip"  title="Editar" data-original-title="Editar">
                                                         <i class="fa fa-pencil"></i></button></a>
-
                                                 <input type="hidden" id="cdMarca" value="${tmcMarca.idMarca}">
                                                 <a id="dltMarcas" href="<c:url value="srvUsuario">
                                                        <c:param name="accion" value="eliminarMarca" />
@@ -144,12 +125,11 @@
                 </section>
             </div>
             <footer class="main-footer">
-                <div class="pull-right hidden-xs">
-                    Administrador Marca
+                <div class="pull-right hidden-xs" style="font-weight:bold">
+                    Administrador/MARCAS
                 </div>
                 <strong>Copyright &copy; 2021 <a href="#">TecnicMotorCycles</a>.</strong> Todos los derechos reservados.
             </footer>
-
             <div class="control-sidebar-bg"></div>
         </div>
         <script src="bower_components/jquery/dist/jquery.min.js"></script>

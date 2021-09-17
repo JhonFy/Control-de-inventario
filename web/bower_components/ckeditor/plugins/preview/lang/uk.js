@@ -1,1 +1,3 @@
-﻿CKEDITOR.plugins.setLang("preview","uk",{preview:"Попередній перегл�?д"});
+/* global CKEDITOR */
+
+﻿CKEDITOR.plugins.setLang("preview","uk",{preview:"Попередній перегл�?д"});

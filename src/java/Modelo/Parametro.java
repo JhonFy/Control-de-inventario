@@ -10,7 +10,6 @@ public class Parametro {
     public Parametro() {
         this.entrada = true;
     }
-
     public Parametro(String nombre, Object valor) {
         this.nombre = nombre;
         this.valor = valor;
@@ -55,5 +54,4 @@ public class Parametro {
     public void setValor(Object valor) {
         this.valor = valor;
     }
-
 }

@@ -22,7 +22,6 @@ public class conexion {
         ds.setPort(3306);
         ds.setDatabaseName("tecnicmotorcycles");
         conexion = ds.getConnection("MoesDeveloper", "MoesDeveloper0312809833");
-
         if (wTransaccion == true) {
             this.conexion.setAutoCommit(false);
             this.transaccionIniciada = true;
@@ -55,7 +54,6 @@ public class conexion {
 
     protected void ejecutarOrden(String wSQL) throws Exception {
         Statement st;
-
         if (this.conexion != null) {
             st = this.conexion.createStatement();
             st.executeUpdate(wSQL);
@@ -65,12 +63,10 @@ public class conexion {
     protected ResultSet ejecutarOrdenDatos(String wSQL) throws Exception {
         Statement st;
         ResultSet rs = null;
-
         if (this.conexion != null) {
             st = this.conexion.createStatement();
             rs = st.executeQuery(wSQL);
         }
-
         return rs;
     }
 
@@ -79,7 +75,6 @@ public class conexion {
         CallableStatement cs;
         Object valor = null;
         String parNombre = "";
-
         try {
             cs = this.getConexion().prepareCall(wProcedimiento);
             if (wParametros != null) {
@@ -101,7 +96,6 @@ public class conexion {
         } finally {
             cs = null;
         }
-
         return valor;
     }
 
@@ -109,7 +103,6 @@ public class conexion {
             List<Parametro> wParametros) throws Exception {
         CallableStatement cs;
         ResultSet rs = null;
-
         try {
             cs = this.getConexion().prepareCall(wProcedimiento);
             if (wParametros != null) {
@@ -117,7 +110,6 @@ public class conexion {
                     if (par.isEntrada() == true) {
                         cs.setObject(par.getNombre(), par.getValor());
                     } else {
-                        // parametro de salida
                     }
                 }
             }
@@ -127,8 +119,6 @@ public class conexion {
         } finally {
             cs = null;
         }
-
         return rs;
     }
-
 }

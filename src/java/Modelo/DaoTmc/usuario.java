@@ -48,6 +48,4 @@ public class usuario {
     public void setCargo(cargo cargo) {
         this.cargo = cargo;
     }
-    
-    
 }

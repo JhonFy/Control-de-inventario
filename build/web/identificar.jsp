@@ -32,12 +32,10 @@
         </div>
       </div>
     </form>
-
     <div class="social-auth-links text-center">
       <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-info"></i> TMC 
         ${msje}</a>
     </div>
-
   </div>
 </div>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>

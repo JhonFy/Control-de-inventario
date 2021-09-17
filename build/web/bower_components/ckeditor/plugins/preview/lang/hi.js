@@ -1,1 +1,3 @@
-﻿CKEDITOR.plugins.setLang("preview","hi",{preview:"प�?रीव�?यू"});
+/* global CKEDITOR */
+
+﻿CKEDITOR.plugins.setLang("preview","hi",{preview:"प�?रीव�?यू"});

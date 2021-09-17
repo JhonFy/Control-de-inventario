@@ -1,1 +1,3 @@
-﻿CKEDITOR.plugins.setLang("print","zh-cn",{toolbar:"打�?�"});
+/* global CKEDITOR */
+
+﻿CKEDITOR.plugins.setLang("print","zh-cn",{toolbar:"打�?�"});

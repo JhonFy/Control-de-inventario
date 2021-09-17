@@ -16,19 +16,15 @@
         <link href="bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="swetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="dist/css/skins/skin-blue.min.css">
-        <link rel="stylesheet"
-              href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     </head>
-
     <body class="hold-transition skin-blue sidebar-mini">
         <div class="wrapper">
-
             <header class="main-header">
                 <a href="#" class="logo">
                     <span class="logo-mini"><b>T</b>MC</span>
                     <span class="logo-lg"><b>Administrador </b>TMC</span>
                 </a>
-
                 <nav class="navbar navbar-static-top" role="navigation">
                     <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
                         <span class="sr-only"></span>
@@ -57,7 +53,6 @@
                     </div>
                 </nav>
             </header>
-                                        
             <aside class="main-sidebar">
                 <section class="sidebar">
                     <div class="user-panel">
@@ -69,28 +64,26 @@
                             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                         </div>
                     </div>
-
                     <ul class="sidebar-menu" data-widget="tree">
                         <li><a href="#"><i ></i> <span></span></a></li>
                         <li class="treeview active">
-                            <a href="#"><i class="glyphicon glyphicon-th-large"></i> <span>Registros</span>
+                            <a href="#"><i class="glyphicon glyphicon-th-large"></i> <span>Políticas TMC</span>
                                 <span class="pull-right-container">
                                     <i class="fa fa-angle-left pull-right"></i>
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="srvUsuario?accion=listarEmpleado"><i class="fa fa-address-book"></i>Empleados</a></li>
-                                <li><a href="srvUsuario?accion=listarProductos"><i class="fa fa-database"></i>Productos</a></li>
-                                <li><a href="srvUsuario?accion=listarMarca"><i class="fa fa-deaf"></i>Marcas</a></li>
-                                <li><a href="srvUsuario?accion=listarProveedor"><i class="fa fa-motorcycle"></i>Proveedores</a></li>
-                                <li><a href="srvUsuario?accion=listarUsuarios"><i class="fa fa-user"></i>Usuarios</a></li>
-                                <li class="active"><a href="srvUsuario?accion=listarPoliticas"><i class="fa fa-cogs"></i>Politicas</a></li>
+                                <li><a href="srvUsuario?accion=listarEmpleado"><i class="fa fa-address-book"></i> Empleados</a></li>                               
+                                <li><a href="srvUsuario?accion=listarMarca"><i class="fa fa-deaf"></i> Marcas</a></li>
+                                <li class="active"><a href="srvUsuario?accion=listarPoliticas"><i class="fa fa-cogs"></i> Políticas</a></li>
+                                <li><a href="srvUsuario?accion=listarProductos"><i class="fa fa-cogs"></i> Productos</a></li>
+                                <li><a href="srvUsuario?accion=listarProveedor"><i class="fa fa-motorcycle"></i> Proveedores</a></li>
+                                <li><a href="srvUsuario?accion=listarUsuarios"><i class="fa fa-user"></i> Usuarios</a></li>
                             </ul>
                         </li>
                     </ul>
                 </section>
-            </aside>  
-
+            </aside>
             <div class="content-wrapper">
                 <section class="content">
                     <div>
@@ -134,7 +127,6 @@
                     </div>
                 </section>
             </div>
-
             <div class="control-sidebar-bg"></div>
         </div>
         <script src="bower_components/jquery/dist/jquery.min.js"></script>

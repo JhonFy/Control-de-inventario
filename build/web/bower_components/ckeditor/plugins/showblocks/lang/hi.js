@@ -1,1 +1,3 @@
-﻿CKEDITOR.plugins.setLang("showblocks","hi",{toolbar:"ब�?लॉक दिखायें"});
+/* global CKEDITOR */
+
+﻿CKEDITOR.plugins.setLang("showblocks","hi",{toolbar:"ब�?लॉक दिखायें"});

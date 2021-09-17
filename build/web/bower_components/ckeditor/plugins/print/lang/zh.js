@@ -1,1 +1,3 @@
-﻿CKEDITOR.plugins.setLang("print","zh",{toolbar:"列�?�"});
+/* global CKEDITOR */
+
+﻿CKEDITOR.plugins.setLang("print","zh",{toolbar:"列�?�"});

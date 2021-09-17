@@ -1,1 +1,3 @@
-﻿CKEDITOR.plugins.setLang("save","si",{toolbar:"ආරක්ෂ�? කරන්න"});
+/* global CKEDITOR */
+
+﻿CKEDITOR.plugins.setLang("save","si",{toolbar:"ආරක්ෂ�? කරන්න"});

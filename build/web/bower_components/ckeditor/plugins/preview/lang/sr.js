@@ -1,1 +1,3 @@
-﻿CKEDITOR.plugins.setLang("preview","sr",{preview:"Изглед �?транице"});
+/* global CKEDITOR */
+
+﻿CKEDITOR.plugins.setLang("preview","sr",{preview:"Изглед �?транице"});

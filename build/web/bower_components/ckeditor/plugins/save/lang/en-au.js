@@ -1,1 +1,3 @@
+/* global CKEDITOR */
+
 ﻿CKEDITOR.plugins.setLang("save","en-au",{toolbar:"Save"});

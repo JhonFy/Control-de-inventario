@@ -56,5 +56,4 @@ public class proveedores {
     public void setEstado(String estado) {
         this.estado = estado;
     }
-    
 }

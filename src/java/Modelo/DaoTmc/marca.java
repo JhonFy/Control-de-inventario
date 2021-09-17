@@ -29,5 +29,4 @@ public class marca {
     public void setEstado(String estado) {
         this.estado = estado;
     }
-    
 }

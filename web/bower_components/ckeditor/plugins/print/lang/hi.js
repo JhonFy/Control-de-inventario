@@ -1,1 +1,3 @@
-﻿CKEDITOR.plugins.setLang("print","hi",{toolbar:"प�?रिन�?ट"});
+/* global CKEDITOR */
+
+﻿CKEDITOR.plugins.setLang("print","hi",{toolbar:"प�?रिन�?ट"});

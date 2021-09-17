@@ -1,1 +1,3 @@
-﻿CKEDITOR.plugins.setLang("preview","gu",{preview:"પૂર�?વદર�?શન"});
+/* global CKEDITOR */
+
+﻿CKEDITOR.plugins.setLang("preview","gu",{preview:"પૂર�?વદર�?શન"});

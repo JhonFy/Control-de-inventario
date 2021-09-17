@@ -1,1 +1,2 @@
-﻿CKEDITOR.plugins.setLang("selectall","sr-latn",{toolbar:"Ozna�?i sve"});
+
+﻿CKEDITOR.plugins.setLang("selectall","sr-latn",{toolbar:"Ozna�?i sve"});

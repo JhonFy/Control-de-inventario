@@ -13,11 +13,11 @@ public class DAOCATEGORIAS extends conexion {
         categoria cat;
         ResultSet rscategoria = null;
         
-        String sqlCateforia = "SELECT E.IDCATEGORIA, E.NOMBRECATEGORIA, ESTADO FROM CATEGORIA E "
+        String sqlCategoria = "SELECT E.IDCATEGORIA, E.NOMBRECATEGORIA, ESTADO FROM CATEGORIA E "
                 +"ORDER BY IDCATEGORIA";
         try{
             this.conectar(false);
-            rscategoria = this.ejecutarOrdenDatos(sqlCateforia);
+            rscategoria = this.ejecutarOrdenDatos(sqlCategoria);
             categorias = new ArrayList<>();
             while(rscategoria.next() == true){
                 cat = new categoria();

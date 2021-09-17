@@ -1,1 +1,3 @@
-﻿CKEDITOR.plugins.setLang("newpage","zh",{toolbar:"新增網�?"});
+/* global CKEDITOR */
+
+﻿CKEDITOR.plugins.setLang("newpage","zh",{toolbar:"新增網�?"});

@@ -1,1 +1,3 @@
-ï»¿CKEDITOR.plugins.setLang("autoembed","ja",{embeddingInProgress:"è²¼ã‚Šä»˜ã?‘ã‚‰ã‚Œã?ŸURLã‚’åŸ‹ã‚?è¾¼ã?¿ä¸­...",embeddingFailed:"ã?“ã?®URLã?¯è‡ªå‹•çš„ã?«åŸ‹ã‚?è¾¼ã‚€ã?“ã?¨ã?Œå‡ºæ?¥ã?¾ã?›ã‚“ã€‚"});
+/* global CKEDITOR */
+
+ï»¿CKEDITOR.plugins.setLang("autoembed","ja",{embeddingInProgress:"è²¼ã‚Šä»˜ï¿½?ï¿½ã‚‰ã‚Œï¿½?ï¿½URLã‚’åŸ‹ï¿½?è¾¼ï¿½?ï¿½ä¸­...",embeddingFailed:"ï¿½?ï¿½ï¿½?ï¿½URLï¿½?ï¿½è‡ªå‹•çš„ï¿½?ï¿½åŸ‹ï¿½?è¾¼ã‚€ï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½å‡ºï¿½?ï¿½ï¿½?ï¿½ï¿½?ï¿½ã‚“ã€‚"});

@@ -1,1 +1,3 @@
-﻿CKEDITOR.plugins.setLang("newpage","sr",{toolbar:"�?ова �?траница"});
+/* global CKEDITOR */
+
+﻿CKEDITOR.plugins.setLang("newpage","sr",{toolbar:"�?ова �?траница"});

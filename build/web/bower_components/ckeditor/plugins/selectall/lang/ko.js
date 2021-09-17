@@ -1,1 +1,3 @@
-﻿CKEDITOR.plugins.setLang("selectall","ko",{toolbar:"모�? 선�?"});
+/* global CKEDITOR */
+
+﻿CKEDITOR.plugins.setLang("selectall","ko",{toolbar:"모�? 선�?"});

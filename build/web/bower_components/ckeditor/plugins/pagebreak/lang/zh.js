@@ -1,1 +1,3 @@
-ï»¿CKEDITOR.plugins.setLang("pagebreak","zh",{alt:"æ?›é ?",toolbar:"æ?’å…¥æ?›é ?ç¬¦è™Ÿä»¥ä¾¿åˆ—å?°"});
+/* global CKEDITOR */
+
+ï»¿CKEDITOR.plugins.setLang("pagebreak","zh",{alt:"ï¿½?ï¿½ï¿½?",toolbar:"ï¿½?ï¿½å…¥ï¿½?ï¿½ï¿½?ç¬¦è™Ÿä»¥ä¾¿åˆ—ï¿½?ï¿½"});

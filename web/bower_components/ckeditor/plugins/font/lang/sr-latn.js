@@ -1,1 +1,3 @@
-ï»¿CKEDITOR.plugins.setLang("font","sr-latn",{fontSize:{label:"VeliÄ?ina ",voiceLabel:"VeliÄ?ina slova",panelTitle:"VeliÄ?ina slova"},label:"Font",panelTitle:"Naziv fonta",voiceLabel:"Font"});
+/* global CKEDITOR */
+
+ï»¿CKEDITOR.plugins.setLang("font","sr-latn",{fontSize:{label:"Veliï¿½?ina ",voiceLabel:"Veliï¿½?ina slova",panelTitle:"Veliï¿½?ina slova"},label:"Font",panelTitle:"Naziv fonta",voiceLabel:"Font"});

@@ -1,1 +1,3 @@
-﻿CKEDITOR.plugins.setLang("save","bn",{toolbar:"সংরক�?ষন করি"});
+/* global CKEDITOR */
+
+﻿CKEDITOR.plugins.setLang("save","bn",{toolbar:"সংরক�?ষন করি"});

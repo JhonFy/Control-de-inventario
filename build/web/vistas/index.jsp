@@ -14,19 +14,15 @@
         <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
         <link href="dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="dist/css/skins/skin-blue.min.css">
-        <link rel="stylesheet"
-              href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     </head>
-
     <body class="hold-transition skin-blue sidebar-mini">
         <div class="wrapper">
-
             <header class="main-header">
                 <a href="#" class="logo">
                     <span class="logo-mini"><b>T</b>MC</span>
                     <span class="logo-lg"><b>TMC </b>Administrador</span>
                 </a>
-
                 <nav class="navbar navbar-static-top" role="navigation">
                     <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
                         <span class="sr-only">Toggle navigation</span>
@@ -58,7 +54,6 @@
                 </nav>
             </header>
             <aside class="main-sidebar">
-
                 <section class="sidebar">
                     <div class="user-panel">
                         <div class="pull-left image">
@@ -69,49 +64,65 @@
                             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                         </div>
                     </div>
-
                     <ul class="sidebar-menu" data-widget="tree">
                         <li><a href="#"><i ></i> <span></span></a></li>
-                        <li class="treeview active">
+                        <li class="treeview">
+                            <a href="#"><i class="glyphicon glyphicon-th-large"></i> <span>E-Mail</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="#"><i class="fa fa-refresh fa-spin fa-1x fa-fw"></i>Redactar</a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#"><i class="glyphicon glyphicon-th-large"></i> <span>Masivo</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="#"><i class="fa fa-refresh fa-spin fa-1x fa-fw"></i>Redactar</a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
                             <a href="#"><i class="glyphicon glyphicon-th-large"></i> <span>Registros</span>
                                 <span class="pull-right-container">
                                     <i class="fa fa-angle-left pull-right"></i>
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="srvUsuario?accion=listarEmpleado"><i class="fa fa-address-book"></i>Empleados</a></li>
-                                <li><a href="srvUsuario?accion=listarProductos"><i class="fa fa-database"></i>Productos</a></li>
-                                <li><a href="srvUsuario?accion=listarMarca"><i class="fa fa-deaf"></i>Marcas</a></li>
-                                <li><a href="srvUsuario?accion=listarProveedor"><i class="fa fa-motorcycle"></i>Proveedores</a></li>
-                                <li><a href="srvUsuario?accion=listarUsuarios"><i class="fa fa-user"></i>Usuarios</a></li>
+                                <li><a href="srvUsuario?accion=listarEmpleado"><i class="fa fa-address-book"></i> Empleados</a></li>                               
+                                <li><a href="srvUsuario?accion=listarMarca"><i class="fa fa-deaf"></i> Marcas</a></li>
+                                <li><a href="srvUsuario?accion=listarProductos"><i class="fa fa-cogs"></i> Productos</a></li>
+                                <li><a href="srvUsuario?accion=listarProveedor"><i class="fa fa-motorcycle"></i> Proveedores</a></li>
+                                <li><a href="srvUsuario?accion=listarUsuarios"><i class="fa fa-user"></i> Usuarios</a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#"><i class="glyphicon glyphicon-th-large"></i> <span>Reportes</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="#"><i class="fa fa-refresh fa-spin fa-1x fa-fw"></i>Redactar</a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#"><i class="glyphicon glyphicon-th-large"></i> <span>Políticas</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
                                 <li><a href="srvUsuario?accion=listarPoliticas"><i class="fa fa-cogs"></i>Politicas</a></li>
-                            </ul>
-                        </li>
-                        <li class="treeview">
-                            <a href="#"><i class="fa fa-cart-arrow-down"></i> <span>Ventas</span>
-                                <span class="pull-right-container">
-                                    <i class="fa fa-angle-left pull-right"></i>
-                                </span>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="#"><i class="fa fa-cart-arrow-down"></i>Nueva Venta</a></li>
-                                <li><a href="#"><i class="fa fa-tags"></i>Administrar Ventas</a></li>
-                            </ul>
-                        </li>
-                        <li class="treeview">
-                            <a href="#"><i class="fa fa-area-chart"></i> <span>Reportes</span>
-                                <span class="pull-right-container">
-                                    <i class="fa fa-angle-left pull-right"></i>
-                                </span>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="#"><i class="fa fa-bar-chart"></i>Reportes Ventas</a></li>
                             </ul>
                         </li>
                     </ul>
                 </section>
             </aside>
-
             <div class="content-wrapper">
                 <br><br>
                 <section class="content">
@@ -120,7 +131,6 @@
                             <div class="small-box bg-aqua">
                                 <div class="inner">
                                     <h3>#1</h3>
-                                    
                                     <p>Colaboradores TMC</p>
                                 </div>
                                 <div class="icon">
@@ -220,12 +230,11 @@
                 </section>
             </div>
             <footer class="main-footer">
-                <div class="pull-right hidden-xs">
-                    Administrador
+                <div class="pull-right hidden-xs" style="font-weight:bold">
+                    Menú/TMC
                 </div>
-                <strong>Copyright &copy; 2020 <a href="#">TecnicMotorCycles</a>.</strong> Todos los derechos reservados.
+                <a  href="https://github.com/JhonFy/Control-de-inventario.git" class="fa fa-github-alt" target="_blank"> <b>TecnicMotorCycles</b></a>
             </footer>
-
             <div class="control-sidebar-bg"></div>
         </div>
         <script src="bower_components/jquery/dist/jquery.min.js"></script>

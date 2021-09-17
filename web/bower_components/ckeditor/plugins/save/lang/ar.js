@@ -1,1 +1,3 @@
-﻿CKEDITOR.plugins.setLang("save","ar",{toolbar:"ح�?ظ"});
+/* global CKEDITOR */
+
+﻿CKEDITOR.plugins.setLang("save","ar",{toolbar:"ح�?ظ"});

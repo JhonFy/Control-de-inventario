@@ -1,1 +1,3 @@
-﻿CKEDITOR.plugins.setLang("selectall","zh",{toolbar:"全�?�"});
+/* global CKEDITOR */
+
+﻿CKEDITOR.plugins.setLang("selectall","zh",{toolbar:"全�?�"});

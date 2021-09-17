@@ -1,1 +1,3 @@
-ï»¿CKEDITOR.plugins.setLang("pagebreak","eo",{alt:"PaÄ?avanco",toolbar:"Enmeti PaÄ?avancon por Presado"});
+/* global CKEDITOR */
+
+ï»¿CKEDITOR.plugins.setLang("pagebreak","eo",{alt:"Paï¿½?avanco",toolbar:"Enmeti Paï¿½?avancon por Presado"});

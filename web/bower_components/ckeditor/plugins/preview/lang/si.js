@@ -1,1 +1,3 @@
-﻿CKEDITOR.plugins.setLang("preview","si",{preview:"න�?වත "});
+/* global CKEDITOR */
+
+﻿CKEDITOR.plugins.setLang("preview","si",{preview:"න�?වත "});

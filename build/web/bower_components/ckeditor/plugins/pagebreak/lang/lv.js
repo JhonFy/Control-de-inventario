@@ -1,1 +1,3 @@
-ï»¿CKEDITOR.plugins.setLang("pagebreak","lv",{alt:"Lapas pÄ?rnesums",toolbar:"Ievietot lapas pÄ?rtraukumu drukai"});
+/* global CKEDITOR */
+
+ï»¿CKEDITOR.plugins.setLang("pagebreak","lv",{alt:"Lapas pï¿½?rnesums",toolbar:"Ievietot lapas pï¿½?rtraukumu drukai"});

@@ -1,1 +1,3 @@
-﻿CKEDITOR.plugins.setLang("pagebreak","bn",{alt:"Page Break",toolbar:"পেজ ব�?রেক"});
+/* global CKEDITOR */
+
+﻿CKEDITOR.plugins.setLang("pagebreak","bn",{alt:"Page Break",toolbar:"পেজ ব�?রেক"});

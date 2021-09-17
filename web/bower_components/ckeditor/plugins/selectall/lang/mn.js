@@ -1,1 +1,3 @@
-﻿CKEDITOR.plugins.setLang("selectall","mn",{toolbar:"Бүгдийг нь �?онгох"});
+/* global CKEDITOR */
+
+﻿CKEDITOR.plugins.setLang("selectall","mn",{toolbar:"Бүгдийг нь �?онгох"});

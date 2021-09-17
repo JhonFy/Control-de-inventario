@@ -9,6 +9,35 @@ import java.util.List;
 
 public class DAOEMPLEADO extends conexion {
 
+    public empleado leerEmpleado(empleado lEmpleado) throws Exception {
+        empleado lctempleado = null;
+        ResultSet rsLemlp;
+        String sqlLempl = "SELECT A.IDEMPLEADO, A.NOMBRE, A.APELLIDOS, A.SEXO, A.TELEFONO, A.FECHANACIMIENTO, A.TIPODOCUMENTO, A.NUMERODOCUMENTO, A.IDUSUARIO "
+                + "FROM EMPLEADO A WHERE A.IDEMPLEADO = " + lEmpleado.getIDEMPLEADO();
+        try {
+            this.conectar(false);
+            rsLemlp = this.ejecutarOrdenDatos(sqlLempl);
+            if (rsLemlp.next() == true) {
+                lctempleado = new empleado();
+                lctempleado.setIDEMPLEADO(rsLemlp.getInt("IDEMPLEADO"));
+                lctempleado.setNOMBRE(rsLemlp.getString("NOMBRE"));
+                lctempleado.setAPELLIDOS(rsLemlp.getString("APELLIDOS"));
+                lctempleado.setSEXO(rsLemlp.getString("SEXO"));
+                lctempleado.setTELEFONO(rsLemlp.getString("TELEFONO"));
+                lctempleado.setFECHANACIMIENTO(rsLemlp.getString("FECHANACIMIENTO"));
+                lctempleado.setTIPODOCUMENTO(rsLemlp.getString("TIPODOCUMENTO"));
+                lctempleado.setNUMERODOCUMENTO(rsLemlp.getString("NUMERODOCUMENTO"));
+                lctempleado.setUsuario(new usuario());
+                lctempleado.getUsuario().setId_usuario(rsLemlp.getInt("IDUSUARIO"));
+            }
+        } catch (Exception e) {
+            System.err.print("Error Leer Empleado" + e.getMessage());
+        } finally {
+            this.cerrar(false);
+        }
+        return lctempleado;
+    }
+
     public List<empleado> listarEmpleado() throws Exception {
         List<empleado> empleados;
         empleado tmcempleado;
@@ -42,57 +71,49 @@ public class DAOEMPLEADO extends conexion {
         return empleados;
     }
 
-    public empleado leerEmpleado(empleado lEmpleado) throws Exception {
-        empleado lctempleado = null;
-        ResultSet rsLemlp;
-        
-        String sqlLempl = "SELECT A.IDEMPLEADO, A.NOMBRE, A.APELLIDOS, A.SEXO, A.TELEFONO, A.FECHANACIMIENTO, A.TIPODOCUMENTO, A.NUMERODOCUMENTO, A.IDUSUARIO "
-                + "FROM EMPLEADO A WHERE A.IDEMPLEADO = " +lEmpleado.getIDEMPLEADO();
-        try{
+    public void RegistrarEmpleado(empleado Empl) throws Exception {
+        String sqlrEmpl;
+        sqlrEmpl = "INSERT INTO  empleado (NOMBRE, APELLIDOS, SEXO, TELEFONO, FECHANACIMIENTO, TIPODOCUMENTO, NUMERODOCUMENTO, IDUSUARIO) "
+                + "VALUES ('" + Empl.getNOMBRE() + "',  '"
+                + Empl.getAPELLIDOS() + "',  '"
+                + Empl.getSEXO() + "',  '"
+                + Empl.getTELEFONO() + "',  '"
+                + Empl.getFECHANACIMIENTO() + "',  '"
+                + Empl.getTIPODOCUMENTO() + "',  '"
+                + Empl.getNUMERODOCUMENTO() + "',  "
+                + Empl.getUsuario().getId_usuario() + ")";
+        try {
             this.conectar(false);
-            rsLemlp = this.ejecutarOrdenDatos(sqlLempl);
-            if(rsLemlp.next() == true){
-                lctempleado = new empleado();
-                lctempleado.setIDEMPLEADO(rsLemlp.getInt("IDEMPLEADO"));
-                lctempleado.setNOMBRE(rsLemlp.getString("NOMBRE"));
-                lctempleado.setAPELLIDOS(rsLemlp.getString("APELLIDOS"));
-                lctempleado.setSEXO(rsLemlp.getString("SEXO"));
-                lctempleado.setTELEFONO(rsLemlp.getString("TELEFONO"));
-                lctempleado.setFECHANACIMIENTO(rsLemlp.getString("FECHANACIMIENTO"));
-                lctempleado.setTIPODOCUMENTO(rsLemlp.getString("TIPODOCUMENTO"));
-                lctempleado.setNUMERODOCUMENTO(rsLemlp.getString("NUMERODOCUMENTO"));
-                lctempleado.setUsuario(new usuario());
-                lctempleado.getUsuario().setId_usuario(rsLemlp.getInt("IDUSUARIO"));
-            }
-        }catch(Exception e){
-            System.err.print("Error Leer Empleado" +e.getMessage());
-        }finally{
-            this.cerrar(false);
-        }
-        return lctempleado;
-    }
-    
-    public void actualizarEmpleado(empleado aEmpleado) throws Exception{
-        
-        String sqlAempl = "UPDATE empleado SET NOMBRE = '"
-                +aEmpleado.getNOMBRE() + "', APELLIDOS = '"
-                +aEmpleado.getAPELLIDOS() + "', SEXO = '"
-                +aEmpleado.getSEXO() + "', TELEFONO = '"
-                +aEmpleado.getTELEFONO() + "', FECHANACIMIENTO = '"
-                +aEmpleado.getFECHANACIMIENTO() + "', TIPODOCUMENTO = '"
-                +aEmpleado.getTIPODOCUMENTO() + "', NUMERODOCUMENTO = '"
-                +aEmpleado.getNUMERODOCUMENTO() + "', IDUSUARIO = "
-                +aEmpleado.getUsuario().getId_usuario()
-                + " WHERE IDEMPLEADO = "+ aEmpleado.getIDEMPLEADO();
-        try{
-            this.conectar(false);
-            this.ejecutarOrden(sqlAempl);
+            this.ejecutarOrden(sqlrEmpl);
             this.cerrar(true);
-        }catch(Exception e){
+        } catch (Exception e) {
+            System.err.print("Fallo SQl Empleados Registrar");
             this.cerrar(false);
             throw e;
         }
-        
+
+    }
+
+    public void actualizarEmpleado(empleado aEmpleado) throws Exception {
+        String sqlAempl = "UPDATE empleado SET NOMBRE = '"
+                + aEmpleado.getNOMBRE() + "', APELLIDOS = '"
+                + aEmpleado.getAPELLIDOS() + "', SEXO = '"
+                + aEmpleado.getSEXO() + "', TELEFONO = '"
+                + aEmpleado.getTELEFONO() + "', FECHANACIMIENTO = '"
+                + aEmpleado.getFECHANACIMIENTO() + "', TIPODOCUMENTO = '"
+                + aEmpleado.getTIPODOCUMENTO() + "', NUMERODOCUMENTO = '"
+                + aEmpleado.getNUMERODOCUMENTO() + "', IDUSUARIO = "
+                + aEmpleado.getUsuario().getId_usuario()
+                + " WHERE IDEMPLEADO = " + aEmpleado.getIDEMPLEADO();
+        try {
+            this.conectar(false);
+            this.ejecutarOrden(sqlAempl);
+            this.cerrar(true);
+        } catch (Exception e) {
+            this.cerrar(false);
+            throw e;
+        }
+
     }
 
     public void eliminarEmpleado(empleado empl) throws Exception {

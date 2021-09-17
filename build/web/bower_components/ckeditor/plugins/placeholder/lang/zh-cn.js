@@ -1,5 +1,7 @@
+/* global CKEDITOR */
+
 ï»¿/*
  Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
  For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
 */
-CKEDITOR.plugins.setLang("placeholder","zh-cn",{title:"å? ä½?ç¬¦å±žæ€§",toolbar:"å? ä½?ç¬¦",name:"å? ä½?ç¬¦å??ç§°",invalidName:"å? ä½?ç¬¦å??ç§°ä¸?èƒ½ä¸ºç©ºï¼Œå¹¶ä¸”ä¸?èƒ½åŒ…å?«ä»¥ä¸‹å­—ç¬¦ï¼š[ã€?]ã€?\x3cã€?\x3e",pathName:"å? ä½?ç¬¦"});
+CKEDITOR.plugins.setLang("placeholder","zh-cn",{title:"ï¿½?ï¿½ï¿½?ç¬¦å±žæ€§",toolbar:"ï¿½?ï¿½ï¿½?ç¬¦",name:"ï¿½?ï¿½ï¿½?ç¬¦ï¿½??ç§°",invalidName:"ï¿½?ï¿½ï¿½?ç¬¦ï¿½??ç§°ï¿½?èƒ½ä¸ºç©ºï¼Œå¹¶ä¸”ï¿½?èƒ½åŒ…ï¿½?ï¿½ä»¥ä¸‹å­—ç¬¦ï¼š[ï¿½?]ï¿½?\x3cï¿½?\x3e",pathName:"ï¿½?ï¿½ï¿½?ç¬¦"});

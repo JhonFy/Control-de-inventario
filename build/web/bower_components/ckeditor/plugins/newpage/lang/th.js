@@ -1,1 +1,3 @@
-﻿CKEDITOR.plugins.setLang("newpage","th",{toolbar:"สร้างหน้าเอ�?สารใหม่"});
+/* global CKEDITOR */
+
+﻿CKEDITOR.plugins.setLang("newpage","th",{toolbar:"สร้างหน้าเอ�?สารใหม่"});

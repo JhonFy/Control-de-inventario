@@ -11,6 +11,39 @@ import java.util.List;
 
 public class DAOPRODUCTOS extends conexion {
 
+    public productos leerProductos(productos tmcProductos) throws Exception {
+        productos lctProductos = null;
+        ResultSet srlProductos = null;
+
+        String sqlLeer = " SELECT A.IDPRODUCTO, A.NOMBREPRODUCTO, A.DESCRIPCION, A.PRECIO, A.CANTIDAD, A.IDCATEGORIA, A.IDMARCA, A.IDPROVEEDOR "
+                + "FROM productos A WHERE A.IDPRODUCTO = " + tmcProductos.getIdProducto();
+
+        try {
+            this.conectar(false);
+            srlProductos = this.ejecutarOrdenDatos(sqlLeer);
+            if (srlProductos.next() == true) {
+                lctProductos = new productos();
+                lctProductos.setIdProducto(srlProductos.getInt("IDPRODUCTO"));
+                lctProductos.setNombreProducto(srlProductos.getString("NOMBREPRODUCTO"));
+                lctProductos.setDescripcion(srlProductos.getString("DESCRIPCION"));
+                lctProductos.setPrecio(srlProductos.getInt("PRECIO"));
+                lctProductos.setCantidad(srlProductos.getString("CANTIDAD"));
+                lctProductos.setCategoria(new categoria());
+                lctProductos.getCategoria().setIdCategoria(srlProductos.getInt("IDCATEGORIA"));
+                lctProductos.setMarca(new marca());
+                lctProductos.getMarca().setIdMarca(srlProductos.getInt("IDMARCA"));
+                lctProductos.setProveedores(new proveedores());
+                lctProductos.getProveedores().setIdProveedor(srlProductos.getInt("IDPROVEEDOR"));
+            }
+            this.cerrar(true);
+        } catch (Exception e) {
+            this.cerrar(false);
+            throw e;
+        } finally {
+        }
+        return lctProductos;
+    }
+
     public List<productos> listarProductos() throws Exception {
         List<productos> lProductos;
         productos tmcProductos;
@@ -44,49 +77,37 @@ public class DAOPRODUCTOS extends conexion {
                 lProductos.add(tmcProductos);
             }
             this.cerrar(true);
-        }catch(Exception e){
+        } catch (Exception e) {
             System.err.print("No Se Pueden Listar Los Proveedores");
             throw e;
-        }finally{
+        } finally {
         }
         return lProductos;
     }
 
-    public productos leerProductos(productos tmcProductos) throws Exception {
-        productos lctProductos = null;
-        ResultSet srlProductos = null;
-        
-        String sqlLeer = " SELECT A.IDPRODUCTO, A.NOMBREPRODUCTO, A.DESCRIPCION, A.PRECIO, A.CANTIDAD, A.IDCATEGORIA, A.IDMARCA, A.IDPROVEEDOR "
-                + "FROM productos A WHERE A.IDPRODUCTO = " +tmcProductos.getIdProducto();
-        
-        try{
+    public void registrarProductos(productos pRds) throws Exception {
+        String sqlpRds;
+
+        sqlpRds = "INSERT INTO productos (nombreProducto, descripcion, precio, cantidad, idCategoria, idMarca, idProveedor) "
+                + "VALUES ('" + pRds.getNombreProducto() + "',  '"
+                + pRds.getDescripcion() + "',  '"
+                + pRds.getPrecio() + "',  '"
+                + pRds.getCantidad() + "',  "
+                + pRds.getCategoria().getIdCategoria() + ", "
+                + pRds.getMarca().getIdMarca() + ",  "
+                + pRds.getProveedores().getIdProveedor() + ")";
+        try {
             this.conectar(false);
-            srlProductos = this.ejecutarOrdenDatos(sqlLeer);
-            if(srlProductos.next() == true){
-                lctProductos = new productos();
-                lctProductos.setIdProducto(srlProductos.getInt("IDPRODUCTO"));
-                lctProductos.setNombreProducto(srlProductos.getString("NOMBREPRODUCTO"));
-                lctProductos.setDescripcion(srlProductos.getString("DESCRIPCION"));
-                lctProductos.setPrecio(srlProductos.getInt("PRECIO"));
-                lctProductos.setCantidad(srlProductos.getString("CANTIDAD"));
-                lctProductos.setCategoria(new categoria());
-                lctProductos.getCategoria().setIdCategoria(srlProductos.getInt("IDCATEGORIA"));
-                lctProductos.setMarca(new marca());
-                lctProductos.getMarca().setIdMarca(srlProductos.getInt("IDMARCA"));
-                lctProductos.setProveedores(new proveedores());
-                lctProductos.getProveedores().setIdProveedor(srlProductos.getInt("IDPROVEEDOR"));
-            }
+            this.ejecutarOrden(sqlpRds);
             this.cerrar(true);
-        }catch(Exception e){
+        } catch (Exception e) {
+            System.err.print("Fallo SQl Productos Registrar");
             this.cerrar(false);
             throw e;
-        }finally{
         }
-        return lctProductos;
     }
 
     public void actualizarProductos(productos aProductos) throws Exception {
-
         String sqlAproductos = "UPDATE productos SET NOMBREPRODUCTO = '"
                 + aProductos.getNombreProducto() + "', DESCRIPCION = '"
                 + aProductos.getDescripcion() + "', PRECIO = '"
@@ -119,5 +140,4 @@ public class DAOPRODUCTOS extends conexion {
             throw e;
         }
     }
-
 }

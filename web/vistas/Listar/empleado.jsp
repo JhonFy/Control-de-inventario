@@ -16,19 +16,15 @@
         <link href="bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="swetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="dist/css/skins/skin-blue.min.css">
-        <link rel="stylesheet"
-              href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+        <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     </head>
-
     <body class="hold-transition skin-blue sidebar-mini">
         <div class="wrapper">
-
             <header class="main-header">
                 <a href="#" class="logo">
                     <span class="logo-mini"><b>T</b>MC</span>
                     <span class="logo-lg"><b>Administrador </b>TMC</span>
                 </a>
-
                 <nav class="navbar navbar-static-top" role="navigation">
                     <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
                         <span class="sr-only"></span>
@@ -57,7 +53,6 @@
                     </div>
                 </nav>
             </header>
-
             <aside class="main-sidebar">
                 <section class="sidebar">
                     <div class="user-panel">
@@ -69,38 +64,30 @@
                             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                         </div>
                     </div>
-
                     <ul class="sidebar-menu" data-widget="tree">
                         <li><a href="#"><i ></i> <span></span></a></li>
                         <li class="treeview active">
-                            <a href="#"><i class="glyphicon glyphicon-th-large"></i> <span>Registros</span>
+                            <a href="#"><i class="glyphicon glyphicon-th-large"></i> <span>Listar</span>
                                 <span class="pull-right-container">
                                     <i class="fa fa-angle-left pull-right"></i>
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li class="active"><a href="srvUsuario?accion=listarEmpleado"><i class="fa fa-address-book"></i>Empleados</a></li>
-                                <li><a href="srvUsuario?accion=listarProductos"><i class="fa fa-database"></i>Productos</a></li>
-                                <li><a href="srvUsuario?accion=listarMarca"><i class="fa fa-deaf"></i>Marcas</a></li>
-                                <li><a href="srvUsuario?accion=listarProveedor"><i class="fa fa-motorcycle"></i>Proveedores</a></li>
-                                <li><a href="srvUsuario?accion=listarUsuarios"><i class="fa fa-user"></i>Usuarios</a></li>
+                                <li class="active"><a href="srvUsuario?accion=listarEmpleado"><i class="fa fa-address-book"></i> Empleados</a></li>                               
+                                <li><a href="srvUsuario?accion=listarMarca"><i class="fa fa-deaf"></i> Marcas</a></li>
+                                <li><a href="srvUsuario?accion=listarProductos"><i class="fa fa-cogs"></i> Productos</a></li>
+                                <li><a href="srvUsuario?accion=listarProveedor"><i class="fa fa-motorcycle"></i> Proveedores</a></li>
+                                <li><a href="srvUsuario?accion=listarUsuarios"><i class="fa fa-user"></i> Usuarios</a></li>
                             </ul>
                         </li>
                     </ul>
                 </section>
             </aside>
-
             <div class="content-wrapper">
                 <section class="content-header">
-                    <a href="srvUsuario?accion=nuevo" class="btn btn-success">
-                        <i class="fa fa-plus"></i>Nuevo Empleado </a>
-
-                    <ol class="breadcrumb">
-                        <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
-                        <li class="active">Marcas</li>
-                    </ol>
+                    <a href="srvUsuario?accion=nuevoEmpleado" class="btn btn-success">
+                        <i class="fa fa-plus"></i> Nuevo Empleado </a>
                 </section>
-
                 <section class="content">
                     <div class="box"> 
                         <div class="box-body">
@@ -108,35 +95,30 @@
                                 <table class="table table-bordered table-striped dataTable table-hover" id="tablaEmpleados" class="display">
                                     <thead>
                                         <tr>
-                                            <th>Id Empleado</th>
-                                            <th>Nombres</th>
-                                            <th>Apellidos</th>
-                                            <th>#-Documento</th>
-                                            <th>T-Documento</th>
-                                            <th>Telefono</th>
-                                            <th>F-Nacimiento</th>
-                                            <th>I-Genero</th>
-                                            <th>Acciones</th> 
+                                            <th style="text-align:center">Nombres</th>
+                                            <th style="text-align:center">Apellidos</th>
+                                            <th style="text-align:center">Documento</th>
+                                            <th style="text-align:center">DNI Tipo</th>
+                                            <th style="text-align:center">Teléfono</th>
+                                            <th style="text-align:center">Nacimiento</th>
+                                            <th style="text-align:center">Género</th>
+                                            <th style="text-align:center">Acciones</th>
                                         </tr>
                                     </thead>
                                     <c:forEach var="tmcEmpleados" items="${empleados}" varStatus="itEmpleados"> 
                                         <tr>
-                                            <td align="center">${itEmpleados.index + 1}</td>
-                                            <td align="center">${tmcEmpleados.NOMBRE}</td>
-                                            <td align="center">${tmcEmpleados.APELLIDOS}</td>
-                                            <td align="center">${tmcEmpleados.NUMERODOCUMENTO}</td>
-                                            <td align="center">${tmcEmpleados.TIPODOCUMENTO}</td>
-                                            <td align="center">${tmcEmpleados.TELEFONO}</td>
-                                            <td align="center">${tmcEmpleados.FECHANACIMIENTO}</td>
-                                            <td align="center">${tmcEmpleados.SEXO}</td>
-
-
+                                            <td align="left">${tmcEmpleados.NOMBRE}</td>
+                                            <td align="left">${tmcEmpleados.APELLIDOS}</td>
+                                            <td align="left">${tmcEmpleados.NUMERODOCUMENTO}</td>
+                                            <td align="left">${tmcEmpleados.TIPODOCUMENTO}</td>
+                                            <td align="left">${tmcEmpleados.TELEFONO}</td>
+                                            <td align="left">${tmcEmpleados.FECHANACIMIENTO}</td>
+                                            <td align="left">${tmcEmpleados.SEXO}</td>
                                             <td align="center"><a href="<c:url value="srvUsuario">
                                                                       <c:param name="accion" value="leerEmpleado" />
                                                                       <c:param name="cActualizare" value="${tmcEmpleados.IDEMPLEADO}" />
                                                                   </c:url>"><button type="button" class="btn btn-warning" data-toggle="tooltip"  title="Editar" data-original-title="Editar">
                                                         <i class="fa fa-pencil"></i></button></a>
-
                                                 <input type="hidden" id="codigoEmpleado" value="${tmcEmpleados.IDEMPLEADO}">
                                                 <a id="dEmpleado" href="<c:url value="srvUsuario">
                                                        <c:param name="accion" value="eliminarEmpleado" />
@@ -153,17 +135,13 @@
                         </div>
                     </div>
                 </section>
-
-
-
             </div>
             <footer class="main-footer">
-                <div class="pull-right hidden-xs">
-                    Administrador Empleado
+                <div class="pull-right hidden-xs" style="font-weight:bold">
+                    Administrador/EMPLEADOS
                 </div>
                 <strong>Copyright &copy; 2021 <a href="#">TecnicMotorCycles</a>.</strong> Todos los derechos reservados.
             </footer>
-
             <div class="control-sidebar-bg"></div>
         </div>
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
