@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="446baeaf-93a2-4b86-b097-3ba17b2edf8d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM usuario]]>
+	</queryString>
+	<field name="IDUSUARIO" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NOMBREUSUARIO" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CLAVE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ESTADO" class="java.lang.Object">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IDCARGO" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="160" splitType="Stretch">
+			<staticText>
+				<reportElement x="335" y="81" width="80" height="20" uuid="9bff2d1d-92de-4c74-b7bb-a7c84cc15aa4"/>
+				<textElement>
+					<font fontName="Arial" size="11" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Fecha Impreso:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="335" y="66" width="201" height="20" uuid="291dcca0-f651-40f0-bd1d-bde6fbbab1e7"/>
+				<textElement>
+					<font fontName="Arial" size="11" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Contacto Telefónico: 3101234567]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="415" y="81" width="132" height="20" uuid="5bbf888e-c6ff-4eda-a367-f94d9a1f6de0"/>
+				<textElement>
+					<font fontName="Arial" size="11" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="335" y="52" width="136" height="20" uuid="6fb1fbb8-e60c-490b-8193-248338c4e9c0"/>
+				<textElement>
+					<font fontName="Arial" size="11" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Dirección:Cl. 90 #17A-29]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="-8" width="570" height="101" uuid="6c8bd811-192d-4675-8af9-98cfb7921768"/>
+				<imageExpression><![CDATA["C:\\Users\\Developer\\Documents\\NetBeansProjects\\SistemaTecnicMotorCycles\\web\\dist\\img\\credit\\LogoBase3.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="170" y="81" width="157" height="20" uuid="0228b979-c625-4acf-bbf7-6423adf259ae"/>
+				<textElement>
+					<font fontName="Arial" size="11" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[tecnicmotorcycles@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="52" width="170" height="20" uuid="8ed086f1-d558-449e-b4aa-b7dab2c46fe8"/>
+				<textElement>
+					<font fontName="Arial" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Reportes TMC Para: Usuarios]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="66" width="146" height="20" uuid="c2976e1c-291e-4c09-9282-f23a8596711d"/>
+				<textElement>
+					<font fontName="Arial" size="11" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Número Nit: 900.1234.5678-9]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1" y="107" width="553" height="38" forecolor="#FFFFFF" backcolor="#1CA4B8" uuid="c007dfd0-5bf8-4bf4-8a16-6db8a1b0b659"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bell MT" size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Representación Impresa De Reportes Para Usuarios]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="149" y="0" width="387" height="57" forecolor="#1CA4B8" uuid="2733ef21-2e8c-4579-8861-0163ab739dec"/>
+				<textElement>
+					<font fontName="Bell MT" size="44" isBold="true" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[TecnicMotorCycles]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="105" width="552" height="1" forecolor="#1CA4B8" uuid="716516fb-e11d-4c23-9a92-1071c490a0bc"/>
+			</line>
+			<line>
+				<reportElement x="1" y="146" width="552" height="1" forecolor="#1CA4B8" uuid="e2a9319c-1c53-49d6-a083-3878711c1ab8"/>
+			</line>
+			<staticText>
+				<reportElement x="1" y="93" width="129" height="14" uuid="33bab23c-9203-4386-a135-fef7b895b9ac"/>
+				<textElement>
+					<font fontName="Arial" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Inventory Control System]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement x="7" y="2" width="17" height="20" uuid="4c2a0027-351a-4e3f-b27b-0dd4b734fdcc"/>
+				<textFieldExpression><![CDATA[$F{IDUSUARIO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="27" y="2" width="67" height="20" uuid="14a0e0fd-d5b1-4714-ac97-24b197570057"/>
+				<textFieldExpression><![CDATA[$F{NOMBREUSUARIO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="102" y="2" width="86" height="20" uuid="7f14e7be-878c-44b7-b5df-4b26ec21004f"/>
+				<textFieldExpression><![CDATA[$F{CLAVE}]]></textFieldExpression>
+			</textField>
+			<break>
+				<reportElement x="0" y="23" width="100" height="1" uuid="bd1d97c7-4b9c-4794-a973-377274e342fe">
+					<printWhenExpression><![CDATA[$F{IDUSUARIO}.intValue()%10==0]]></printWhenExpression>
+				</reportElement>
+			</break>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="117" splitType="Stretch">
+			<image>
+				<reportElement x="8" y="5" width="545" height="101" uuid="90fdb0b6-7758-4653-bf61-9ffe302da874"/>
+				<imageExpression><![CDATA["C:\\Users\\Developer\\Documents\\NetBeansProjects\\SistemaTecnicMotorCycles\\web\\dist\\img\\TMC\\LogoPieDePagina.png"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="172" y="91" width="380" height="1" forecolor="#1CA4B8" uuid="14f8f69f-c3fc-41a6-a0bb-531616764a8e"/>
+			</line>
+			<textField>
+				<reportElement x="449" y="80" width="100" height="20" uuid="c456ef9b-b3f9-416f-b033-92963b1cbec3"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

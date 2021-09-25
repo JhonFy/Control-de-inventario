@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="78c2a1f4-0585-4553-8986-bf3968350cb1">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM MARCA]]>
+	</queryString>
+	<field name="idMarca" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreMarca" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estado" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="160" splitType="Stretch">
+			<staticText>
+				<reportElement x="335" y="81" width="80" height="20" uuid="be6f121a-94cf-41b1-921b-0008da29bcbe"/>
+				<textElement>
+					<font fontName="Arial" size="11" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Fecha Impreso:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="335" y="66" width="201" height="20" uuid="69865cf6-e518-473f-8eb0-ed55301c951e"/>
+				<textElement>
+					<font fontName="Arial" size="11" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Contacto Telefónico: 3101234567]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="415" y="81" width="132" height="20" uuid="b35e673f-819e-4338-84ff-9a5c6cfc0bed"/>
+				<textElement>
+					<font fontName="Arial" size="11" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="335" y="52" width="136" height="20" uuid="b0bada51-3f9a-43e7-815b-7b36e39808f0"/>
+				<textElement>
+					<font fontName="Arial" size="11" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Dirección:Cl. 90 #17A-29]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="-8" width="570" height="101" uuid="429d7a49-3ee8-40d7-9fd2-6c12441700a3"/>
+				<imageExpression><![CDATA["C:\\Users\\Developer\\Documents\\NetBeansProjects\\SistemaTecnicMotorCycles\\web\\dist\\img\\credit\\LogoBase3.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="170" y="81" width="157" height="20" uuid="583e3225-a2e6-45f3-a5ab-b8acd1136d6a"/>
+				<textElement>
+					<font fontName="Arial" size="11" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[tecnicmotorcycles@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="52" width="170" height="20" uuid="81adcd1c-2de9-4781-aded-2205cf4ef92f"/>
+				<textElement>
+					<font fontName="Arial" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Reportes TMC Para: Marcas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="66" width="146" height="20" uuid="52844f33-6feb-43ce-86a3-64d3c5fdff33"/>
+				<textElement>
+					<font fontName="Arial" size="11" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Número Nit: 900.1234.5678-9]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1" y="107" width="553" height="38" forecolor="#FFFFFF" backcolor="#1CA4B8" uuid="fe1989b6-a6a7-4905-8346-903d60298d32"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bell MT" size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Representación Impresa De Reportes Para Marcas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="149" y="0" width="387" height="57" forecolor="#1CA4B8" uuid="330c725e-8515-467d-b124-a022466dce94"/>
+				<textElement>
+					<font fontName="Bell MT" size="44" isBold="true" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[TecnicMotorCycles]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="105" width="552" height="1" forecolor="#1CA4B8" uuid="466983f1-d234-430e-9fa5-4ff47154ac31"/>
+			</line>
+			<line>
+				<reportElement x="1" y="146" width="552" height="1" forecolor="#1CA4B8" uuid="56f058dc-33eb-44a1-b6a2-a7075f3d4131"/>
+			</line>
+			<staticText>
+				<reportElement x="1" y="93" width="129" height="14" uuid="a342e994-1c04-4890-a9c6-9df841490546"/>
+				<textElement>
+					<font fontName="Arial" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Inventory Control System]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement x="7" y="2" width="17" height="20" uuid="4e71b7e7-0c87-4854-b0f9-32ab49352ead"/>
+				<textFieldExpression><![CDATA[$F{idMarca}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="27" y="2" width="67" height="20" uuid="d923527d-61b6-4e74-806d-2c9a7b064867"/>
+				<textFieldExpression><![CDATA[$F{nombreMarca}]]></textFieldExpression>
+			</textField>
+			<break>
+				<reportElement x="0" y="23" width="100" height="1" uuid="00dc948f-45cd-4ffb-87d6-9268bc74fa59">
+					<printWhenExpression><![CDATA[$F{idMarca}.intValue()%10==0]]></printWhenExpression>
+				</reportElement>
+			</break>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="117">
+			<image>
+				<reportElement x="10" y="10" width="545" height="101" uuid="142a648e-d69a-4f33-8ae8-db0a28245dbc"/>
+				<imageExpression><![CDATA["C:\\Users\\Developer\\Documents\\NetBeansProjects\\SistemaTecnicMotorCycles\\web\\dist\\img\\TMC\\LogoPieDePagina.png"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="172" y="96" width="380" height="1" forecolor="#1CA4B8" uuid="284a0d31-301a-48c2-8658-d42b6dd70e75"/>
+			</line>
+			<textField>
+				<reportElement x="449" y="80" width="100" height="20" uuid="5b8901bf-c8d9-4507-926f-4e6956d852d6"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8c26f1c0-0375-4108-b427-8efed85341c8">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM productos]]>
+	</queryString>
+	<field name="idProducto" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreProducto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="precio" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidad" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idCategoria" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idMarca" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idProveedor" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="160" splitType="Stretch">
+			<staticText>
+				<reportElement x="335" y="81" width="80" height="20" uuid="5d411492-05bb-4db9-9c6e-22775ca06e03"/>
+				<textElement>
+					<font fontName="Arial" size="11" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Fecha Impreso:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="335" y="66" width="201" height="20" uuid="8649393e-6a36-4e17-88fd-f39a2a46fe2f"/>
+				<textElement>
+					<font fontName="Arial" size="11" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Contacto Telefónico: 3101234567]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="415" y="81" width="132" height="20" uuid="1485f427-e1af-4a63-ae52-70b2b0bb0853"/>
+				<textElement>
+					<font fontName="Arial" size="11" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="335" y="52" width="136" height="20" uuid="398f9c79-2add-47e8-91c1-615cbef54942"/>
+				<textElement>
+					<font fontName="Arial" size="11" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Dirección:Cl. 90 #17A-29]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="-8" width="570" height="101" uuid="1774eb35-b996-4bb3-a856-0d2719d07e07"/>
+				<imageExpression><![CDATA["C:\\Users\\Developer\\Documents\\NetBeansProjects\\SistemaTecnicMotorCycles\\web\\dist\\img\\credit\\LogoBase3.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="170" y="81" width="157" height="20" uuid="95d458ba-693c-40b8-8ed7-e866280ac56e"/>
+				<textElement>
+					<font fontName="Arial" size="11" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[tecnicmotorcycles@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="52" width="170" height="20" uuid="5df0b202-cf65-4aac-b7c7-e0bbb08d8dc5"/>
+				<textElement>
+					<font fontName="Arial" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Reportes TMC Para: Productos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="66" width="146" height="20" uuid="988ffade-58d8-4e2d-b425-0000f39195c5"/>
+				<textElement>
+					<font fontName="Arial" size="11" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Número Nit: 900.1234.5678-9]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1" y="107" width="553" height="38" forecolor="#FFFFFF" backcolor="#1CA4B8" uuid="ee2152c6-ef4b-4458-a804-39eca6ce7691"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bell MT" size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Representación Impresa De Reportes Para Productos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="149" y="0" width="387" height="57" forecolor="#1CA4B8" uuid="0fcbfd52-2470-4649-bda2-22d28f4ab6a4"/>
+				<textElement>
+					<font fontName="Bell MT" size="44" isBold="true" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[TecnicMotorCycles]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="105" width="552" height="1" forecolor="#1CA4B8" uuid="5b78a4b1-9c89-4eda-a829-e254dfa94482"/>
+			</line>
+			<line>
+				<reportElement x="1" y="146" width="552" height="1" forecolor="#1CA4B8" uuid="5c01ed0b-0516-4305-86f5-691bfed3ccfc"/>
+			</line>
+			<staticText>
+				<reportElement x="1" y="93" width="129" height="14" uuid="74d6e0c0-4efd-4b82-ada0-50aca6cb7fcd"/>
+				<textElement>
+					<font fontName="Arial" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Inventory Control System]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement x="7" y="2" width="17" height="20" uuid="68d24b05-ecb3-4514-ac86-2a472864eca3"/>
+				<textFieldExpression><![CDATA[$F{idProducto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="27" y="2" width="67" height="20" uuid="96146376-ffb8-469d-bc26-f2916086688a"/>
+				<textFieldExpression><![CDATA[$F{nombreProducto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="102" y="2" width="104" height="20" uuid="1b10377a-d02a-4056-8c4a-c6127aaffd54"/>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="221" y="2" width="17" height="20" uuid="b09ee56c-502f-4b7e-a6de-3290759322a4"/>
+				<text><![CDATA[$]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="230" y="2" width="55" height="20" uuid="1b68e7f3-8804-4540-b446-64fe496c426e"/>
+				<textFieldExpression><![CDATA[$F{precio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="281" y="2" width="33" height="20" uuid="258d274d-1cce-4fc5-886f-cc44d94800a3"/>
+				<text><![CDATA[Stock]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="312" y="2" width="100" height="20" uuid="93dd0f99-5b24-4ab2-a307-2555343a2ba5"/>
+				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+			</textField>
+			<break>
+				<reportElement x="0" y="23" width="100" height="1" uuid="8ae6c88d-bd1f-4cc9-a3d1-e8fb22923222">
+					<printWhenExpression><![CDATA[$F{idProducto}.intValue()%20==0]]></printWhenExpression>
+				</reportElement>
+			</break>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="117" splitType="Stretch">
+			<image>
+				<reportElement x="8" y="5" width="545" height="101" uuid="b33eb612-5d5e-4a27-b81c-585bbf8f2295"/>
+				<imageExpression><![CDATA["C:\\Users\\Developer\\Documents\\NetBeansProjects\\SistemaTecnicMotorCycles\\web\\dist\\img\\TMC\\LogoPieDePagina.png"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="170" y="91" width="380" height="1" forecolor="#1CA4B8" uuid="253c9a8e-c6dd-4934-9019-701d61f8b5bd"/>
+			</line>
+			<textField>
+				<reportElement x="449" y="80" width="100" height="20" uuid="d74eeaca-e611-4335-b220-ce4701019d8a"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
